@@ -12,9 +12,9 @@ def call_function(call_function_part, verbose=False):
     func_args = call_function_part.args
     func_args["working_directory"] = "./calculator"
     if verbose == True:
-        print(f"Calling function: {func_name}({func_args})")
+        print(f"CALL_FUNCTION: Calling function: {func_name}({func_args})")
     else:
-        print(f"Calling function: {func_name}")
+        print(f"CALL_FUNCTION: Calling function: {func_name}")
     
     functions = {
         "get_file_content":get_file_content,
@@ -34,12 +34,11 @@ def call_function(call_function_part, verbose=False):
             ],
         )
     else:
-        # print("DEBUG CALL FUNCTION ==============================")
         try:
             function_result = functions[func_name](**func_args)
             return types.Content(
                 role="tool",
-                parts=[
+                parts=[ # do this.parts[0].response f0r response etc.
                     types.Part.from_function_response(
                         name=func_name,
                         response={"result": function_result},

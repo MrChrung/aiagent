@@ -4,17 +4,17 @@ from functions.write_file import write_file
 from functions.run_python_file import run_python_file  
 def main():
 # get_files_info tests
-    # print("Result for current directory:")
-    # print("" + get_files_info("calculator", "."))
+    print("Result for current directory:")
+    print("" + get_files_info("calculator", "."))
 
-    # print("\nResult for 'pkg' directory:")
-    # print("" + get_files_info("calculator", "pkg"))
+    print("\nResult for 'pkg' directory:")
+    print("" + get_files_info("calculator", "pkg"))
 
-    # print("\nResult for '/bin' directory:")
-    # print("" + get_files_info("calculator", "/bin"))
+    print("\nResult for '/bin' directory:")
+    print("" + get_files_info("calculator", "/bin"))
 
-    # print("\nResult for '../' directory:")
-    # print("" + get_files_info("calculator", "../"))
+    print("\nResult for '../' directory:")
+    print("" + get_files_info("calculator", "../"))
 
 
 # get_file_content tests
@@ -48,25 +48,25 @@ def main():
     # )print(result)
 
 # run_python_file tests
-    print('Result for run_python_file("calculator", "main.py")')
-    result = run_python_file("calculator", "main.py")
-    print(result)
+    # print('Result for run_python_file("calculator", "main.py")')
+    # result = run_python_file("calculator", "main.py")
+    # print(result)
 
-    print('Result for run_python_file("calculator", "main.py", ["3+5"])')
-    result = run_python_file("calculator", "main.py", ['3+5'])
-    print(result)
+    # print('Result for run_python_file("calculator", "main.py", ["3+5"])')
+    # result = run_python_file("calculator", "main.py", ['3+5'])
+    # print(result)
 
-    print('run_python_file("calculator", "tests.py")')
-    result = run_python_file("calculator", "tests.py")
-    print(result)
+    # print('run_python_file("calculator", "tests.py")')
+    # result = run_python_file("calculator", "tests.py")
+    # print(result)
 
-    print('Result for run_python_file("calculator", "../main.py")')
-    result = run_python_file("calculator", "../main.py")
-    print(result)
+    # print('Result for run_python_file("calculator", "../main.py")')
+    # result = run_python_file("calculator", "../main.py")
+    # print(result)
 
-    print('run_python_file("calculator", "nonexistent.py")')
-    result = run_python_file("calculator", "nonexistent.py")
-    print(result)
+    # print('run_python_file("calculator", "nonexistent.py")')
+    # result = run_python_file("calculator", "nonexistent.py")
+    # print(result)
 
 if __name__ == "__main__":
     main()

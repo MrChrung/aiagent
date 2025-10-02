@@ -38,11 +38,7 @@ def run_python_file(working_directory, file_path, args=[]):
     try:
         arguments = [sys.executable, full_file_path] + list(args or [])
         process = subprocess.run(arguments,timeout=30, text=True, cwd=working_path, capture_output=True)
-        # print("DEBUG ++++++++++++++++++++")
-        # print(process)
-        # print(working_path)
-        # print(full_file_path)
-        # print("DEBUG --------------------")
+
 
         result = ""
         output_str = f"STDOUT: {process.stdout}"
